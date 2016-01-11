@@ -152,6 +152,8 @@ public class Chapter5Demo
 		  Language = new Language();
 		if ((languageindicator % 3) == 1)
 		  Language = new Sprak();
+		if ((languageindicator % 3) == 2)
+			Language = new Lang2();
 		break;
 	case 4:			// reload array
 		for (int i = 0; i < 20; i++)
