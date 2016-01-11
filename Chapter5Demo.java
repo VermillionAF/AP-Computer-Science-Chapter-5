@@ -147,7 +147,7 @@ public class Chapter5Demo
 // the following code appropriately.
 		
 	case 3:		// change to second or third language
-		languageindicator++;
+		languageindicator = Language.changeLanguage();
 		if ((languageindicator % 3) == 0)
 		  Language = new Language();
 		if ((languageindicator % 3) == 1)

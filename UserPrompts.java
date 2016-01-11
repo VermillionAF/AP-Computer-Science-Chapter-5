@@ -9,4 +9,5 @@ public String toString();
 public String printHeader();
 public String beforeSwap();
 public String afterSwap();
+public int changeLanguage();
 } // end of interface UserPrompts

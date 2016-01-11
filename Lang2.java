@@ -6,6 +6,7 @@ public class Lang2 implements UserPrompts
 {
 
 	public static Scanner invalue = new Scanner(System.in);
+	public static int lang;
 	
 	//@Override
 	public int menu() 
@@ -64,5 +65,13 @@ public class Lang2 implements UserPrompts
 		String localstring = "\n ...换用之后...";
 		return localstring;
 	} // end of afterSwap
+	
+	
+	public int changeLanguage() {
+		System.out.println("For Norwegian, input 1.");
+		System.out.println("For Chinese, input 2.");
+		lang = invalue.nextInt();
+		return lang;
+	}// end of changeLanguage
 
 }

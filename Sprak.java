@@ -6,6 +6,7 @@ public class Sprak implements UserPrompts
 {
 
 	public static Scanner invalue = new Scanner(System.in);
+	public static int lang;
 	
 	//@Override
 	public int menu() 
@@ -64,5 +65,12 @@ public class Sprak implements UserPrompts
 		String localstring = "\n ...Etter Bytte...";
 		return localstring;
 	} // end of afterSwap
+	
+	public int changeLanguage() {
+		System.out.println("For Engelsk, inngang 0.");
+		System.out.println("For Kinesisk, inngang 2.");
+		lang = invalue.nextInt();
+		return lang;
+	}//end of changeLanguage
 
 }
