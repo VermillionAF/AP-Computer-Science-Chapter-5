@@ -1,6 +1,6 @@
 import java.util.*;
 
-// For reference, I utilized MDBG for English to Chinese [simplified] translations
+// For reference, I utilized MDBG and Google Translate for English to Chinese [simplified] translations
 
 public class Lang2 implements UserPrompts 
 {
@@ -68,8 +68,8 @@ public class Lang2 implements UserPrompts
 	
 	
 	public int changeLanguage() {
-		System.out.println("For Norwegian, input 1.");
-		System.out.println("For Chinese, input 2.");
+		System.out.println("对于英语，输入0");
+		System.out.println("对于挪威，输入2.");
 		lang = invalue.nextInt();
 		return lang;
 	}// end of changeLanguage
