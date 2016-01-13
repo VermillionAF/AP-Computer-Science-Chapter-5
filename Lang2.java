@@ -69,7 +69,7 @@ public class Lang2 implements UserPrompts
 	
 	public int changeLanguage() {
 		System.out.println("对于英语，输入0");
-		System.out.println("对于挪威，输入2.");
+		System.out.println("对于挪威，输入1.");
 		lang = invalue.nextInt();
 		return lang;
 	}// end of changeLanguage
