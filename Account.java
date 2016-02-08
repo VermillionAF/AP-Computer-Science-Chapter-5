@@ -5,7 +5,7 @@
 // change the name on, charge a fee to, and print a summary of the account. 
 //******************************************************* 
 public class Account {   
-	private static int numAcc;
+	private int numAcc;
 	private double balance;   
 	private String name;   
 	private long acctNum;   
@@ -72,17 +72,28 @@ public class Account {
 		balance = balance - amount;
 		person.deposit(amount);
 	}
-	public static int numAccounts() {
+	public int numAccounts() {
 		return numAcc;
 	}
-	public void close(Account person) {
-		person.name = "CLOSED";
-		person.balance = 0;
+	public void close() {
+		this.name = "CLOSED";
+		this.balance = 0;
 		numAcc--;
 	}
-	public static void consolidate(Account p1, Account p2) {
-		if (p1.name != "CLOSED") {
-			Account made = new Account(p1.name, 12345);
+	public void transferFunds(Account p1, double amt) {
+		this.balance = this.balance - amt;
+		p1.balance = p1.balance + amt;
+		System.out.println("Sent $" + amt + " to " + p1.name);
+	}
+	public static Account consolidate(Account p1, Account p2) {
+		if (p1.name != "CLOSED" && p2.name != "CLOSED" && p1.acctNum != p2.acctNum) {
+			Account made = new Account(p1.balance + p2.balance, p1.name, (p1.acctNum + p2.acctNum) / 2);
+			p1.close();
+			p2.close();
+			return made;
+		} else {
+			System.out.println("An error has occured!");
+			return null;
 		}
 	}
 	
